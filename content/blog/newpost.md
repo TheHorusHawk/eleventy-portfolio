@@ -1,5 +1,6 @@
 ---
 title: New post on this blog
+description: First human made post on my blog
 tags: 
     - Actual content
     - Human-made content
