@@ -1,8 +1,8 @@
 module.exports = {
-	title: "Bruno's 11ty static website",
+	title: "Bruno's static website",
 	url: "https://brunoteles-portfolio.netlify.app",
 	language: "en",
-	description: "Portflio website. First website using 11ty, testing features.",
+	description: "First website using 11ty, testing features. Will be a portfolio website some day.",
 	author: {
 		name: "Bruno Teles",
 		email: "brunomadteles@gmail.com",
