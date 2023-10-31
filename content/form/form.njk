@@ -7,27 +7,24 @@ eleventyNavigation:
 
 <h1>Form</h1>
 <form name="contact" method="POST" data-netlify="true">
-  <p>
-    <label>Your Name: <input type="text" id="name" name="name" /></label>
-  </p>
-  <p>
-    <label>Your Email: <input type="email" id="email" name="email" /></label>
-  </p>
-  <p>
-    <label
-      >Your Role:
-      <select name="role[]" multiple>
-        <option value="leader">Leader</option>
-        <option value="follower">Follower</option>
-      </select></label
-    >
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button class="form_submit" type="submit">Send</button>
-  </p>
+    <div class="row mb-3">
+      <div class="col-12 col-md-6">
+        <label for="firstName" class="form-label">First Name: <input type="text" id="firstName" name="name" class="form-control" aria-describedby="nameHelp"/></label>
+        <div id="firstNameHelp" class="form-text visually-hidden">Please type in your first name</div>
+      </div>
+      <div class="col">
+        <label for="surname" class="form-label">Surname: <input type="text" id="firstName" name="name" class="form-control" aria-describedby="surnameHelp"/></label>
+        <div id="surnameNameHelp" class="form-text visually-hidden">Please type in your surname</div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="email" class="form-label">Your Email: <input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp" /></label>
+      <div id="emailHelp" class="form-text visually-hidden">Please type in your email</div>
+    </div>
+    <div class="row mb-3"><label for="message" class="form-label" >Message: </label><textarea class="form-control" id="message" name="message"></textarea></div>
+  <div class="row">
+    <button class="form_submit btn btn-dark" type="submit">Send</button>
+  </div>
 </form>
 <script>
   //get default border colours (to use on input when validation passes)
