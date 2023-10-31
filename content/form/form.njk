@@ -1,11 +1,11 @@
 ---
 layout: layouts/home.njk
 eleventyNavigation:
-  key: Form
+  key: Contact me
   order: 5
 ---
 
-<h1>Form</h1>
+<h1>Leave me a message</h1>
 <form name="contact" method="POST" data-netlify="true">
     <div class="row mb-3">
       <div class="col-12 col-md-6">
@@ -18,10 +18,14 @@ eleventyNavigation:
       </div>
     </div>
     <div class="row mb-3">
-      <label for="email" class="form-label">Your Email: <input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp" /></label>
+      <label for="email" class="form-label">Your Email:</label><input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp" />
       <div id="emailHelp" class="form-text visually-hidden">Please type in your email</div>
     </div>
-    <div class="row mb-3"><label for="message" class="form-label" >Message: </label><textarea class="form-control" id="message" name="message"></textarea></div>
+    <div class="row mb-3">
+      <label for="message" class="form-label" >Message: </label>
+      <textarea class="form-control" id="message" name="message" aria-describedby="messageHelp"></textarea>
+      <div id="messageHelp" class="form-text">Please type in your message</div>
+    </div>
   <div class="row">
     <button class="form_submit btn btn-dark" type="submit">Send</button>
   </div>
