@@ -1,19 +1,19 @@
 ---
 layout: layouts/home.njk
 eleventyNavigation:
-  key: Contact me
-  order: 5
+  key: Contact
+  order: 6
 ---
 
 <h1 class="mb-3">Leave me a message</h1>
 <form name="contact" method="POST" data-netlify="true">
     <div class="row mb-3">
       <div class="col-12 col-md-6">
-        <label for="firstName" class="form-label">First Name: <input type="text" id="firstName" name="name" class="form-control" aria-describedby="nameHelp"/></label>
+        <label for="firstName" class="form-label">First Name: <input type="text" id="firstName" name="firstName" class="form-control" aria-describedby="nameHelp"/></label>
         <div id="firstNameHelp" class="form-text visually-hidden">Please type in your first name</div>
       </div>
       <div class="col">
-        <label for="surname" class="form-label">Surname: <input type="text" id="firstName" name="name" class="form-control" aria-describedby="surnameHelp"/></label>
+        <label for="surname" class="form-label">Surname: <input type="text" id="surname" name="surname" class="form-control" aria-describedby="surnameHelp"/></label>
         <div id="surnameNameHelp" class="form-text visually-hidden">Please type in your surname</div>
       </div>
     </div>
@@ -28,9 +28,9 @@ eleventyNavigation:
     </div>
   <div class="row">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        Check if you'd like to be added to the mailing list
+      <input class="form-check-input" type="checkbox" value="" id="mailinglistCheck">
+      <label class="form-check-label" for="mailinglistCheck">
+        I'd like to be added to the mailing list
       </label>
     </div>
 
