@@ -1,5 +1,5 @@
 module.exports = {
-	title: "Bruno's static website",
+	title: "Portfolio website",
 	url: "https://brunoteles-portfolio.netlify.app",
 	language: "en",
 	description: "First website using 11ty, testing features. Will be a portfolio website some day.",
