@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+draft: true
 eleventyNavigation:
   key: Manifesto
   order: 4
