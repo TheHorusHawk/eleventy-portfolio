@@ -99,3 +99,7 @@ footer {
     width: 10rem;
     object-fit: contain;
 }
+
+.copyright {
+    padding-left: 1rem;
+}
