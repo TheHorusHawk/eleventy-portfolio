@@ -94,6 +94,8 @@ footer {
     border-top: 1px dashed var(--color-gray-20)
 } 
 
-header {
-    padding: 1em 1em 0em;
+.small-logo {
+    height: 6.2rem;
+    width: 10rem;
+    object-fit: contain;
 }
