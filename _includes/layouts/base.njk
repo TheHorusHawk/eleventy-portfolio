@@ -48,10 +48,10 @@
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-				<ul class="nav navbar-nav">
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="nav navbar-nav d-flex">
 				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a class="nav-link" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+					<li class="nav-item d-flex justify-content-end"><a class="nav-link" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 				{%- endfor %}
 				</ul>
 			</div>
