@@ -1,0 +1,67 @@
+h2 {
+    padding-left: 0.5rem;
+}
+
+h1 {
+    color:rgb(4, 57, 39);
+}
+
+footer>p, footer>a {
+    text-align: center;
+} 
+
+
+.card {
+    text-align: center;
+}
+
+.greenback {
+    background-image: linear-gradient(to right,#e8772e,#e8772e);
+    color: white;
+}
+
+.mbneg2 {
+    margin-bottom: -2rem;
+}
+
+.project {
+    min-height: 14rem;
+    max-width: 18rem;
+}
+
+.card {
+    /* margin-top:2rem; */
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.card-row {
+    margin-top: 0;
+}
+
+section {
+    min-height:50vh;
+    /* background-color: rgb(243, 255, 240); */
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+#contact>p::before {
+    height: 2rem;   
+}
+
+.wrapper {
+    margin: 1rem 0;
+}
+
+img {
+    width: 23rem;
+    height: 17rem;
+    margin:auto;
+    object-fit: contain;
+}
+
+a {
+    text-align: right;
+}
