@@ -1,0 +1,84 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Moon
+  order: 5
+---
+<link rel="stylesheet" href="/css/projects.css">
+<section id="moon">
+    <h1>Moon Phase</h2>
+    <p class="p-2 text-start">This is the information on the Moon phase. I read somewhere there's a specific neurotransmitter associated with each quarter of the moon. I'll link to that website when I find it. The neurotransmitter "in flux" is supposed to indicate which task you should be engaging on. While I don't believe it, necessarily, it is as good an excuse as any to fetch from an API :).</p>
+    <div class="wrapper card">
+            <img id="moonPicture" src="" alt="">
+            <!-- <img src="https://4.bp.blogspot.com/-XSBu458mBWs/WdDAlmsGSbI/AAAAAAAACYc/qUvMaymBXiQjo5AqhMHiPTnIuWZ65R7swCLcBGAs/s1600/wikihowphasesof%2Bthe%2Bmoon.jpg" class="card-img-top" alt="Image of the moon phase"> -->                   
+            <div id="message" class="card-body">
+            Getting information on the moon phase.
+        </div>
+    </div>
+</section>
+<script>
+    //Gets the moon phase and enters data onto webpage
+    function getMoon() {
+        try {
+            fetch('https://api.met.no/weatherapi/sunrise/3.0/moon?lat=51.5&lon=0')
+                .then((response) => response.json()).then((jsonData) => {
+                    let moonphase = jsonData.properties.moonphase;
+                    let paragraph = document.getElementById("message");
+                    let currentPhase = phasename(moonphase);
+                    paragraph.innerHTML = `Moon is ${currentPhase}, we're ${whatpercent(moonphase)}% into it, neurotransmitter in flux is ${neurotransmitter(moonphase)}. It's time to ${whattodo(moonphase)}.`
+                    let image = document.getElementById("moonPicture");
+                    switch (currentPhase) {
+                        case "waning crescent":
+                             image.setAttribute("src", "/img/WaningCrescent.jpg")
+                             image.setAttribute("alt", `Moon in ${currentPhase}`)
+                             break
+                        case "waxing gibbous":
+                             image.setAttribute("src", '/img/WaxingGibbous.jpeg')
+                             image.setAttribute("alt", `Moon in ${currentPhase}`)
+                             break
+                        case "waning gibbous":
+                             image.setAttribute("src", '/img/WaningGibbous.jpg')
+                             image.setAttribute("alt", `Moon in ${currentPhase}`)
+                             break
+                        case "waxing crescent":
+                             image.setAttribute("src", '/img/WaxingCrescent.jpg')
+                             image.setAttribute("alt", `Moon in ${currentPhase}`)
+                             break
+                    }
+
+                });
+        } catch (error) {
+            let paragraph = document.getElementById("message");
+            paragraph.innerHTML = error;
+        }
+    }
+
+    function phasename(moonphasenumber) {
+        if (moonphasenumber > 0 && moonphasenumber < 90) { return "waxing crescent" }
+        if (moonphasenumber > 90 && moonphasenumber < 180) { return "waxing gibbous" }
+        if (moonphasenumber > 180 && moonphasenumber < 270) { return "waning gibbous" }
+        if (moonphasenumber > 270 && moonphasenumber < 360) { return "waning crescent" }
+    }
+
+    function neurotransmitter(moonphasenumber) {
+        if (moonphasenumber > 0 && moonphasenumber < 90) { return "Acetylcholine" }
+        if (moonphasenumber > 90 && moonphasenumber < 180) { return "Serotonin" }
+        if (moonphasenumber > 180 && moonphasenumber < 270) { return "Dopamine" }
+        if (moonphasenumber > 270 && moonphasenumber < 360) { return "Neuroadrenalin" }
+    }
+
+    function whattodo(moonphasenumber) {
+        if (moonphasenumber > 0 && moonphasenumber < 90) { return "meet with people" }
+        if (moonphasenumber > 90 && moonphasenumber < 180) { return "do work" }
+        if (moonphasenumber > 180 && moonphasenumber < 270) { return "go to nature" }
+        if (moonphasenumber > 270 && moonphasenumber < 360) { return "organize" }
+    }
+
+    function whatpercent(moonphasenumber) {
+        let number = (moonphasenumber % 90) * 100 / 90;
+        return Math.round(number);
+    }
+    document.addEventListener("DOMContentLoaded", (event) => {
+				getMoon();
+			});
+</script>
