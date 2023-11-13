@@ -38,12 +38,9 @@ section {
 }
 
 
-#contact>p::before {
-    height: 2rem;   
-}
-
 .wrapper {
-    margin: 1rem 0;
+    margin: 1rem auto;
+    padding-top: var(--bs-card-spacer-y);
 }
 
 img {
@@ -51,6 +48,7 @@ img {
     height: 17rem;
     margin:auto;
     object-fit: contain;
+    padding-top: ;
 }
 
 a {
