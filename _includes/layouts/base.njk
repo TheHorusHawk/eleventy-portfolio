@@ -84,7 +84,7 @@
 				footerspan.innerHTML += Math.floor(years + 1970);
 			});
 
-			//Detects darktheme preference 
+			//Detects darktheme preference and sets the navbar accordingly 
 			const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
 			if (darkTheme) {
 				let navbar = document.getElementById("navbar");
