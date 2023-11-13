@@ -89,6 +89,12 @@
 			if (darkTheme) {
 				let navbar = document.getElementById("navbar");
 				navbar.setAttribute("data-bs-theme", "dark"); 
+				//if accordion is present, set its theme to dark, too
+				try {
+					let accordion = document.getElementById("accordionNobleTruths");
+					accordion.setAttribute("data-bs-theme", "dark"); 
+				} catch (err) {
+				}
 			}
 		</script>
 	</body>
