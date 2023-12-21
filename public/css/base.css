@@ -34,3 +34,18 @@ nav {
     --bs-primary-bg-subtle: #e8772e;
     --bs-primary-text-emphasis: var(--bs-heading-color);
 }
+
+iframe {
+    width: 560px;
+    height: 315px;
+}
+
+@media (max-width: 990px) {
+    iframe {
+        width: 100%;
+    }
+}
+
+.iframe-wrapper {
+    text-align: center;
+}
