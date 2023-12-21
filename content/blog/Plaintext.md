@@ -21,3 +21,9 @@ One to keep watching out for. Here's a link in case you're interested.
 <div class="iframe-wrapper">
 <iframe src="https://www.youtube.com/embed/gd5uJ7Nlvvo?si=e7kGKf_yonb7Fsmk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
+
+Also, here's a link to my vscode with the Fira Code font. Look how attractive those arrow functions become! And how handsome is that strict equality operator?
+
+<img src='/img/exampleligature.png' alt='Javascript code snippet with an equality operator with three lines and an arrow function where equals and greater-than-sign are rendered as a single arrow sign'>
+
+<p style="margin-top:1rem">See you later. Until then, you know, pike matchbox!</p>
