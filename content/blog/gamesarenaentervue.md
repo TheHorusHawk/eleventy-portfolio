@@ -5,6 +5,7 @@ date: 2023-10-05
 tags:
   - Django
   - Web Application
+  - Python
 ---
 So, this week, I finished implementing the feature of setting a player as online and not online via middleware and caching. They way it's implemented, there's a list of all the player who are online - defined as having interacted with the application in the last 5 minutes - on the cache at all times, which is updated by the middleware.
 

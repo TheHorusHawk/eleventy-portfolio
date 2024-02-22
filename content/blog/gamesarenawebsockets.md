@@ -5,9 +5,11 @@ date: 2024-02-14
 tags:
   - Django
   - Web Sockets
+  - Python
   - Django-channel
   - ASGI
   - Redis
+  - Web Application
 
 ---
 Hey,

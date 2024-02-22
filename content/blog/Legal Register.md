@@ -7,6 +7,7 @@ tags:
   - Virtual Environments
   - Postgresql
   - bash_aliases
+  - Python
 
 ---
 I have just started a new web application, a Legal Register. It's a way for organisations to know what laws and regulations they have to comply to. 

@@ -8,6 +8,7 @@ tags:
   - Python
   - Django
   - JavaScript
+  - Web Application
 
 ---
 Hey everyone,
